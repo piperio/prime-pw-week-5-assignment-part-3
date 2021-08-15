@@ -39,3 +39,22 @@ console.log(collection[i].title +' ' + 'by ' + collection[i].artist + ' '+ 'publ
   //console.log(collection.title + 'by' + collection.artist + 'published in' collection.yearPublished);
 }
 }
+//the above showCollection took me forever to get to work. Googling + classmates helped with some clues.
+
+function findByArtist(artist){
+ let searchArtist = [];
+ for (let i = 0; i < collection.length; i++) {
+   const element = collection[i];
+  if (artist == element.artist){
+    searchArtist.push(element);
+  } else {
+    console.log('Artist not found in collection');
+    return searchArtist;
+  }// end if else
+}// end for loop
+} // end function
+
+console.log(findByArtist('Nirvana'));
+console.log(findByArtist('Radiohead'));
+
+//I'm not able to figure out how to do this part. Please help. Thank you.
